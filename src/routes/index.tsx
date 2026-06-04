@@ -30,8 +30,9 @@ function Index() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((t) => (
           <Link key={t.to} to={t.to} className="group">
-            <Card className="h-full p-5 transition-all hover:border-primary/40 hover:shadow-[var(--shadow-elevated)]">
+            <Card className="h-full p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-elevated)]">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+
                 <t.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-4 text-base font-semibold">{t.title}</h3>
