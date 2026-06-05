@@ -5,7 +5,7 @@ import { AlertCircle } from "lucide-react";
 export function AIOutput({ text, loading }: { text?: string; loading?: boolean }) {
   if (!text && !loading) return null;
   return (
-    <Card className="p-5">
+    <Card className="border-border/70 bg-card/80 p-5 shadow-[var(--shadow-card)] backdrop-blur">
       {loading && !text ? (
         <div className="space-y-3">
           <div className="h-3 w-1/3 animate-pulse rounded bg-muted" />
@@ -27,10 +27,14 @@ export function AIOutput({ text, loading }: { text?: string; loading?: boolean }
 }
 
 export function PageHeader({ title, description }: { title: string; description: string }) {
+  const words = title.split(" ");
+  const last = words.pop() ?? "";
   return (
-    <div className="mb-6">
-      <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
-      <p className="mt-1 text-sm text-muted-foreground">{description}</p>
+    <div className="mb-8">
+      <h1 className="text-3xl font-normal tracking-tight md:text-4xl">
+        {words.join(" ")} <span className="font-serif italic text-primary">{last}</span>
+      </h1>
+      <p className="mt-2 text-sm text-muted-foreground">{description}</p>
     </div>
   );
 }
