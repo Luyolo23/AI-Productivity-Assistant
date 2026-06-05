@@ -27,12 +27,12 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="border-b border-sidebar-border">
         <div className="flex items-center gap-2 px-2 py-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-sidebar-primary to-sidebar-primary/70 text-sidebar-primary-foreground shadow-sm">
             <Sparkles className="h-4 w-4" />
           </div>
           <div className="flex flex-col group-data-[collapsible=icon]:hidden">
-            <span className="text-sm font-semibold">Lumen AI</span>
-            <span className="text-xs text-muted-foreground">Workspace</span>
+            <span className="text-sm font-semibold tracking-tight">Lumen <span className="font-serif italic text-sidebar-primary">AI</span></span>
+            <span className="text-xs text-sidebar-foreground/60">Workspace</span>
           </div>
         </div>
       </SidebarHeader>
